@@ -1,0 +1,245 @@
+{
+  "update.mode": "manual",
+  "editor.fontSize": 16,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.indentSize": 2,
+  // "editor.wordWrapColumn": 10,
+  // "editor.maxTokenizationLineLength": 20000,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on",
+  },
+  "[snippets][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+  },
+  "editor.formatOnSave": false,
+  // Auto Rename Tag
+  "editor.linkedEditing": true,
+  // Auto Close Tag
+  "html.autoClosingTags": true,
+  "js/ts.autoClosingTags.enabled": false,
+  // 括号对着色
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.removeUnused.ts": "never",
+    "source.removeUnusedImports": "never",
+    "source.sortImports": "never",
+    "source.organizeImports": "never",
+    "source.organizeImports.biome": "never",
+    "source.fixAll.biome": "never",
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.ts": "never",
+    "source.addMissingImports.ts": "explicit",
+  },
+  // import模块时，取最短路径（相对路径和tsconfig中path比较）
+  "js/ts.preferences.importModuleSpecifier": "shortest",
+  // 移动文件时提示更新路径
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.suggest.enabled": true,
+  // 开启tsgo [安装插件 TypeScript (Native Preview]](https://github.com/microsoft/typescript-go)
+  "js/ts.experimental.useTsgo": false,
+  // 优先类型 => import type { xxx } from "xxx"
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
+  // https://github.com/microsoft/TypeScript/issues/56832
+  // "typescript.preferTypeOnlyAutoImports": true,
+  // 开启ts验证器（关闭后Error级别的报错不会有提示）
+  "js/ts.validate.enabled": true,
+  // 项目范围错误检查（默认只检查打开的标签）
+  "js/ts.tsserver.experimental.enableProjectDiagnostics": false,
+  "[typescriptreact][typescript]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.sort.json": "never",
+      "source.removeUnused.ts": "never",
+      "source.removeUnusedImports": "never",
+      "source.sortImport": "never",
+      "source.organizeImports": "never",
+      "source.fixAll.biome": "never",
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.ts": "never",
+      "source.addMissingImports.ts": "explicit",
+    },
+  },
+  "editor.dragAndDrop": false,
+  // 嵌入式类型提示
+  "editor.inlayHints.enabled": "on",
+  "editor.parameterHints.enabled": true,
+  "js/ts.inlayHints.parameterNames.enabled": "all",
+  "js/ts.inlayHints.variableTypes.enabled": false,
+  "js/ts.inlayHints.propertyDeclarationTypes.enabled": true,
+  "js/ts.inlayHints.parameterTypes.enabled": true,
+  "js/ts.inlayHints.functionLikeReturnTypes.enabled": false,
+  // 属性自动补全方式
+  "js/ts.preferences.jsxAttributeCompletionStyle": "auto",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.customLabels.enabled": true,
+  "workbench.editor.customLabels.patterns": {
+    "**/index.ts": "${dirname}/${filename}",
+    "**/index.tsx": "${dirname}/${filename}",
+    "**/page.tsx": "${dirname}/${filename}",
+    "**/utils.ts": "${dirname}/${filename}",
+    "**/enum.ts": "${dirname}/${filename}",
+    "**/context.ts": "${dirname}/${filename}",
+    "**/interface.ts": "${dirname}/${filename}",
+    "**/types.d.ts": "${dirname}/${filename}",
+    "**/index.css": "${dirname}/${filename}",
+    "**/common.css": "${dirname}/${filename}",
+    "**/package.json": "${dirname}/pkg",
+    "**/turbo.json": "${dirname}/turbo",
+  },
+  // prettier
+  "prettier.enable": true,
+  "prettier.printWidth": 120,
+  "prettier.documentSelectors": [
+    "**/*.{ts,tsx,js,jsx}"
+  ],
+  // Tailwind CSS IntelliSense
+  "tailwindCSS.suggestions": true,
+  "tailwindCSS.emmetCompletions": false,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "class:list",
+    ".*className.*",
+    "classes"
+  ],
+  "tailwindCSS.classFunctions": [
+    "tv",
+    "cn",
+    "clsx",
+    "twMerge"
+  ],
+  "tailwindCSS.experimental.classRegex": [
+    // Support for the `cx()` function from classnames / clsx
+    [
+      "cn\\(([^)]*)\\)",
+      "cx\\(([^)]*)\\)",
+      "(?:\"|'|`)([^(?:\"|'|`)]*)(?:\"|'|`)"
+    ],
+    // 全范围
+    // ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.lint.cssConflict": "error",
+  // commentTranslate
+  "commentTranslate.targetLanguage": "zh-CN",
+  "commentTranslate.source": "Google",
+  "baiduTranslate.appId": "",
+  "baiduTranslate.appKey": "",
+  // dotLog
+  "dotLog.config": [
+    {
+      "trigger": "log",
+      "description": "quick console.log result",
+      "format": "console.log",
+      "prefix": "[",
+      "suffix": "]",
+    },
+    {
+      "trigger": "warn",
+      "description": "quick console.warn result",
+      "format": "console.warn",
+    },
+    {
+      "trigger": "error",
+      "description": "quick console.err result",
+      "format": "console.error",
+    },
+    {
+      "trigger": "debug",
+      "description": "quick console.debug result",
+      "format": "console.debug",
+      "prefix": "[",
+      "suffix": "]",
+    },
+    {
+      "trigger": "ll",
+      "description": "quick console.debug result",
+      "format": "console.debug",
+      "prefix": "%c[",
+      "suffix": "]', 'color: red;background:yellow",
+    },
+  ],
+  "varTranslation.translationEngine": "google",
+  "security.promptForLocalFileProtocolHandling": false,
+  "Codegeex.EnableExtension": false,
+  "Codegeex.Privacy": false,
+  "Codegeex.License": "",
+  "Codegeex.Chat.LanguagePreference": "中文",
+  "Codegeex.Comment.LanguagePreference": "中文",
+  "Codegeex.SidebarUI.LanguagePreference": "中文",
+  "workbench.editorAssociations": {
+    // 以默认方式（文本）打开svg文件
+    "*.svg": "default",
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "i18n-ally.localesPaths": [
+    "**/i18n/locales"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "id",
+  "i18n-ally.displayLanguage": "id",
+  "i18n-ally.extract.autoDetect": false,
+  "git-blame.config.showBlameInline": false,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true,
+    "windsurf": true,
+    "cursor-global": true,
+    "cursor-workspace": true
+},
+  "chat.agent.enabled": true,
+  // ESlint
+  "eslint.enable": true,
+  "svg.preview.mode": "svg",
+  // cssrem
+  "cssrem.rootFontSize": 16,
+  "cssrem.vwDesign": 396,
+  "npm.enableRunFromFolder": true,
+  "diffEditor.codeLens": true,
+  "geminicodeassist.displayInlineContextHint": false,
+  "Codegeex.CommitMessageStyle": "ConventionalCommits",
+  "git.ignoreMissingGitWarning": true,
+  "chat.tools.terminal.outputLocation": "chat",
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
+  "git.allowNoVerifyCommit": true,
+  "Codegeex.Local": {
+    "apiURL": "http://127.0.0.1:1234/v1/chat/completions",
+    "useChatGLM": true,
+    "chatGLM": {
+      "apiKey": "",
+      "model": "qwen/qwen3.5-9b"
+    },
+    "chat": {
+      "useDefaultSystemPrompt": true,
+      "systemPrompt": "",
+      "temperature": 0.2,
+      "top_p": 0.95,
+      "max_tokens": 1024,
+      "presence_penalty": 1
+    },
+    "completions": {
+      "useDefaultSystemPrompt": true,
+      "systemPrompt": "",
+      "temperature": 0.2,
+      "top_p": 0.95,
+      "max_tokens": 64,
+      "presence_penalty": 1
+    }
+  }
+}
